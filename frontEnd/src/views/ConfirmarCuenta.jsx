@@ -13,7 +13,6 @@ const ConfirmarCuenta = () => {
       try {
         const respuesta = await clienteAxios(`/usuarios/confirmar/${id}`)
         const { data } = respuesta
-        console.log(data)
         setAlerta({
           msg: data.msg,
           error: false
@@ -36,6 +35,12 @@ const ConfirmarCuenta = () => {
   },[])
 
   const { msg } = alerta
+
+  if (msg === "Cuenta confirmada") {
+    setTimeout(() => {
+      window.location.href = "/"
+    }, 3000)
+  }
 
   return (
     <>

@@ -57,13 +57,10 @@ const Registrar = () => {
     }
 
   }
-
-
   return (
     <>
       <h1 className="text-sky-600 font-black text-6xl"> Crea tu cuenta y administra tus
         <span className="text-slate-700"> proyectos</span> </h1>
-     
       <form
         onSubmit={handleSubmit}
         className="my-10 bg-white shadow rounded-md p-10">
@@ -77,15 +74,19 @@ const Registrar = () => {
           <label htmlFor="email" className="uppercase  text-gray-600 block text-xl font-bold" >Correo electronico</label>
           <input
             className="w-full border-2 border-gray-100 p-3 rounded outline-none focus:border-sky-500 mt-2"
-            type="email" id="email" name="email" placeholder="Escribe tu correo electronico" value={email} onChange={e => setEmail(e.target.value)} />
+            type="email" id="email" name="email"
+            required
+            placeholder="Escribe tu correo electronico" value={email} onChange={e => setEmail(e.target.value)} />
         </div>
         <div className="my-5">
           <label
             className="uppercase  text-gray-600 block text-xl font-bold"
             htmlFor="password">Contraseña</label>
           <input
+            required
             className="w-full border-2 border-gray-100 p-3 rounded outline-none focus:border-sky-500 mt-2"
-            type="password" id="password" name="password" placeholder="Escribe tu contraseña" value={password} onChange={e => setPassword(e.target.value)} />
+            type="password" id="password" name="password" placeholder="Escribe tu contraseña" 
+            value={password} onChange={e => setPassword(e.target.value)} />
         </div>
         <div className="my-5">
           <label

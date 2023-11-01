@@ -54,6 +54,7 @@ const Login = () => {
         <div className="my-5">
           <label htmlFor="email" className="uppercase  text-gray-600 block text-xl font-bold" >Correo electronico</label>
           <input
+            
             className="w-full border-2 border-gray-100 p-3 rounded outline-none focus:border-sky-500"
             type="email" id="email" name="email" placeholder="Email" value={email}
             onChange={(e) => setEmail(e.target.value)}
